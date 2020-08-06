@@ -13,11 +13,17 @@ RSpec.describe Rotate do
     expect(r.is_rotation(a,b)).to eq(true)
   end
 
- it "rotated orray" do
+  it "rotated array1" do
+    a = [5,3,1]
+    b = [3,1,5]
+    expect(r.is_rotation(a,b)).to eq(true)
+  end
+ 
+  it "rotated orray2 partial match" do
      a = [5,3,1]
-     b = [3,1,5]
-     expect(r.is_rotation(a,b)).to eq(true)
- end
+     b = [1,1,5]
+     expect(r.is_rotation(a,b)).to eq(false)
+  end
 
   it "larger sized arrayB" do
     a = [1,2,3]
